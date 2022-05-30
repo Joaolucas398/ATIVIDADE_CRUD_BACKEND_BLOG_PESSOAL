@@ -12,6 +12,7 @@ import com.blogpessoal.BlogPessoal.model.Postagem;
 @Repository
 // agora o postagemrepository tem as class do Jpa
 public interface PostagemRepository extends JpaRepository<Postagem, Long> {
+
 	public List<Postagem> findAllByTituloContainingIgnoreCase (String titulo);
 	
 	
