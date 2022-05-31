@@ -51,7 +51,7 @@ public class TemaController {
 	}
 
 	@PutMapping
-	public ResponseEntity<Tema> put(@RequestBody Tema tema) {
+	public ResponseEntity<Tema> put(@Valid @RequestBody Tema tema) {
 		return ResponseEntity.ok(repository.save(tema));
 	}
 
