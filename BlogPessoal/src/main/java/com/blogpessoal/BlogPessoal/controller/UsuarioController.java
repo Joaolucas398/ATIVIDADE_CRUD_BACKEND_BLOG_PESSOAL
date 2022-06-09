@@ -16,7 +16,7 @@ import com.blogpessoal.BlogPessoal.model.Usuario;
 import com.blogpessoal.BlogPessoal.service.UsuarioService;
 
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin("*")
 @RequestMapping("/usuarios")
 public class UsuarioController {
 
@@ -26,7 +26,7 @@ public class UsuarioController {
 	
 	
 	@PostMapping("/logar")
-	public ResponseEntity<UserLogin> Autenrication(@RequestBody Optional<UserLogin> user){
+	public ResponseEntity<UserLogin> Autentication(@RequestBody Optional<UserLogin> user){
 		return usuarioService.Logar(user).map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
 		

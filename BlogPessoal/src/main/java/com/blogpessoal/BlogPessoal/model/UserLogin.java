@@ -6,9 +6,9 @@ public class UserLogin {
 	
 	private String usuario;
 	
-	private String token;
-	
 	private String senha;
+	
+	private String token;
 	
 	
 
