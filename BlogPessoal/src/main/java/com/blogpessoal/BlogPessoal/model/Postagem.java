@@ -12,6 +12,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.blogpessoal.BlogPessoal.model.Tema;
+import com.blogpessoal.BlogPessoal.model.Usuario;
 
 //indica para o string que o objeto criado se torna uma tabela
 @Entity
@@ -39,6 +41,10 @@ public class Postagem {
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
 	private Tema tema;
+
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Usuario usuario;
 	
 	
 	
