@@ -2,15 +2,23 @@ package com.blogpessoal.BlogPessoal.model;
 
 public class UserLogin {
 
+	private long id;
+
 	private String nome;
-	
+
 	private String usuario;
-	
+
 	private String senha;
-	
+
 	private String token;
-	
-	
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public String getNome() {
 		return nome;
@@ -43,6 +51,5 @@ public class UserLogin {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
-	
+
 }
